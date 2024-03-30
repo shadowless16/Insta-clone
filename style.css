@@ -1,0 +1,355 @@
+/* General Styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(249, 250, 250);
+}
+
+.main-area {
+    width: 60%;
+    margin-left: 30%;
+    margin-right: 3%;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.head-container {
+    /* max-width: 900px; */
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 20px;
+}
+
+/* Nav section */
+
+.nav {
+    width: 5.4%;
+    height: 100vh;
+    border-right: 1px solid rgb(210, 208, 208);
+    background-color: white;
+    position: fixed;
+    top: 0;
+
+}
+
+
+
+.nav-links-container,
+.logo {
+    padding: .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-links-container a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.nav-links,
+.logo {
+    border: none 0.5px;
+    border-radius: 16px;
+    margin-bottom: .5rem;
+    padding: .8rem;
+}
+
+.nav-links:hover {
+    background: rgb(249, 247, 247);
+}
+
+svg:hover {
+    cursor: pointer;
+}
+
+.profile-pic-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.profile-pic-container img {
+    height: 35px;
+    border-radius: 50%;
+}
+
+/* Stories */
+.stories-container {
+    width: auto;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #ffffff;
+    border: solid .5px thin;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+    /* box-shadow: [horizontal offset] [vertical offset] [blur radius] [spread radius] [color]; */
+}
+
+.stories img,
+.post-header img {
+    width: 66px;
+    height: 66px;
+    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(45deg, orange, purple, rgb(246, 2, 165)) border-box;
+    border: 3px solid transparent;
+    border-radius: 50px;
+    margin-right: .6rem;
+    cursor: pointer;
+}
+
+.story-name {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Post Section */
+
+.posts {
+    margin-top: 2rem;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1px;
+    padding: 1rem;
+}
+
+.post-name {
+    font-weight: 600;
+}
+
+.main-post img {
+    width: 100%;
+}
+
+.icons-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.post-info p {
+    margin-bottom: .5rem;
+    padding-top: .5rem;
+    padding-left: 1rem;
+}
+
+.username {
+    font-weight: 600;
+    display: inline-block;
+}
+
+.post-text {
+    display: inline-block;
+}
+
+.comments a,
+.post-time {
+    color: rgb(167, 165, 165);
+}
+
+.comment-section {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+textarea {
+    border: none;
+    resize: none;
+    outline: none;
+}
+
+.post-link a {
+    color: aqua;
+}
+
+/* Profile and friends suggestions  */
+
+.profile-info {
+    width: 40%;
+    margin-top: 3rem;
+}
+
+.profile {
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.profile-pic {
+    display: flex;
+}
+
+.profile-pic img {
+    height: 64px;
+    border-radius: 50%;
+    margin-right: 0.65em;
+}
+
+.name {
+    margin-bottom: .5rem;
+}
+
+.profile-name {
+    color: rgb(167, 165, 165);
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.info {
+    margin-left: .4rem;
+    display: flex;
+    align-content: space-around;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.switch {
+    display: flex;
+    align-content: space-around;
+    justify-content: center;
+    flex-direction: column;
+    /* margin-left: 2rem; */
+    font-weight: 600;
+    color: aqua;
+}
+
+.grey-link {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(207, 206, 206);
+}
+
+.year {
+    font-weight: 500;
+    color: rgb(207, 206, 206);
+    font-size: .75rem;
+}
+
+/* @media only screen and (max-width: 768px) {
+    .head-container {
+        flex-direction: column;
+    }
+
+    .nav {
+        width: 100%;
+        height: auto;
+        position: static;
+        border-right: none;
+    }
+
+    .main-area {
+        width: 100%;
+        margin-left: 0;
+    }
+} */
+
+/* Add styles for the nav toggle button */
+.nav-toggle {
+    display: none;
+    /* Hide by default on larger screens */
+}
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    .nav {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        left: -100%;
+        /* Move the nav off-screen by default */
+        transition: left 0.3s ease;
+        border-right: none;
+    }
+
+    .nav.active {
+        left: 0;
+        /* Show the nav when active */
+    }
+
+    .nav-toggle {
+        display: block;
+        /* Show the toggle button on smaller screens */
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        z-index: 999;
+        /* Ensure the button is above other content */
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+
+/* Hide the profile info section on smaller screens */
+@media only screen and (max-width: 768px) {
+    .profile-info {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .posts {
+        width: 90%;
+        /* Adjust the width of the main post container */
+        margin: 1rem auto;
+        /* Add margin for centering */
+    }
+
+    .post-header {
+        padding: 0.5rem;
+        /* Reduce padding for the post header */
+    }
+
+    .post-info p {
+        font-size: 0.9rem;
+        /* Reduce font size for post information */
+    }
+
+    .icons-container {
+        padding: 0.5rem;
+        /* Reduce padding for the icons container */
+    }
+
+    .icons-container svg {
+        width: 1.2rem;
+        /* Adjust icon size */
+        height: 1.2rem;
+    }
+
+    .comment-section {
+        padding: 0.5rem;
+        /* Reduce padding for the comment section */
+    }
+
+    .comment-section textarea {
+        width: 90%;
+        /* Adjust width of the comment textarea */
+    }
+
+    .post-link {
+        margin-top: 0.5rem;
+        /* Add margin to separate post link */
+    }
+}
